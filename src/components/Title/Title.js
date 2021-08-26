@@ -21,7 +21,7 @@ const Title = ({ title1, title2, title3, text, path, pathText }) => {
       </h2>
       <p css={textStyles}>
         {text}{' '}
-        <Link css={linkStyles} to="/sign-up">
+        <Link css={linkStyles} to={path}>
           {pathText}
         </Link>{' '}
       </p>

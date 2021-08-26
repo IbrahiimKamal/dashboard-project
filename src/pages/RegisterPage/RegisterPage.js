@@ -13,7 +13,6 @@ import logo from '../../assets/images/logo.png';
 import {
   footerLogoStyles,
   footerStyles,
-  forgotLinkStyles,
   forgotStyles,
   headerStyles,
   imagesContainerStyles,
@@ -21,9 +20,11 @@ import {
   logoStyles,
 } from './styles';
 
-const LoginPage = () => {
+const RegisterPage = () => {
+  const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setUserPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   return (
     <section className="py-5">
@@ -31,7 +32,7 @@ const LoginPage = () => {
         <div className="row">
           {/* image */}
           <div css={imagesContainerStyles} className="col-10 col-md-6 mx-auto">
-            <FormImage title="Want your best management software?" isLink />
+            <FormImage title="We have a “strategic” plan its called doing things." />
           </div>
           {/* form */}
           <div className="col-10 col-md-6 mx-auto">
@@ -41,14 +42,24 @@ const LoginPage = () => {
             </div>
 
             <Title
-              title1="Hi buddy,"
-              title2="welcome"
-              title3="Back!"
-              text="Still don't have an account?"
-              pathText="Sign up"
-              path="/sign-up"
+              title1="Join with"
+              title2="thousands of"
+              title3="startup!"
+              text="Already have an account?"
+              pathText="Login"
+              path="/login"
             />
             <form>
+              <Input
+                fullWidth="100%"
+                label="Full Name"
+                labelId="username"
+                type="text"
+                placeholder="Melvin Carlson"
+                value={userName}
+                handleChange={(e) => setUserName(e.target.value)}
+              />
+
               <Input
                 fullWidth="100%"
                 label="Email"
@@ -69,20 +80,27 @@ const LoginPage = () => {
                 handleChange={(e) => setUserPassword(e.target.value)}
               />
 
+              <Input
+                fullWidth="100%"
+                label="Re-type Password"
+                labelId="Password1"
+                type="password"
+                placeholder="Enter Password"
+                value={confirmPassword}
+                handleChange={(e) => setConfirmPassword(e.target.value)}
+              />
+
               <div css={forgotStyles}>
                 <Input
                   type="checkbox"
                   labelId="checkbox"
-                  label="Keep me logged in"
+                  label='By clicking "SIGN UP" I agree to the Terms and Conditions and Privacy Policy.'
                   styles={inputStyles}
                   color="black"
                 />
-                <Link to="/login" css={forgotLinkStyles}>
-                  Forgot Password
-                </Link>
               </div>
 
-              <Button title="login" />
+              <Button title="sign up" />
             </form>
 
             <div css={footerStyles}>
@@ -96,4 +114,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;

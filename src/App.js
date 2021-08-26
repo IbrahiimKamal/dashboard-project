@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import { HomePage, LoginPage } from './pages';
+import { HomePage, LoginPage, RegisterPage } from './pages';
 
 const App = () => {
   return (
@@ -11,6 +11,9 @@ const App = () => {
         </Route>
         <Route path="/login">
           <LoginPage />
+        </Route>
+        <Route path="/sign-up">
+          <RegisterPage />
         </Route>
       </Switch>
     </Router>
