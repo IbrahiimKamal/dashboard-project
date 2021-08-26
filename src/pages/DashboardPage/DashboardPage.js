@@ -1,9 +1,7 @@
-import { Tree } from 'rsuite';
-
-import { tableData } from '../../utils/tableData';
-
+import InputSearch from '../../components/InputSearch/InputSearch';
 import Navbar from '../../components/Navbar/Navbar';
 import Sidebar from '../../components/Sidebar/Sidebar';
+import TreeTable from '../../components/TreeTable/TreeTable';
 
 const DashboardPage = () => {
   return (
@@ -17,7 +15,8 @@ const DashboardPage = () => {
               <Sidebar />
             </div>
             <div className="col-10 col-md-10">
-              <Tree data={tableData} />
+              <InputSearch />
+              <TreeTable />
             </div>
           </div>
         </div>

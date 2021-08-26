@@ -1,3 +1,50 @@
 .rs-tree-node {
   border-bottom: 1px solid var(--grey-color);
 }
+
+.fileUpload {
+  display: inline-block;
+  background: #655c97;
+  border-radius: 0.1rem;
+  color: #fff;
+  font-size: 1em;
+  /* margin: 1.25em auto; */
+  overflow: hidden;
+  padding: 0.875em;
+  position: relative;
+  text-align: center;
+  width: 160px;
+  cursor: pointer;
+}
+.fileUpload:hover,
+.fileUpload:active,
+.fileUpload:focus {
+  background: #00a2a4;
+  cursor: pointer;
+}
+.fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  width: 148px;
+  height: 46px;
+  cursor: pointer;
+}
+
+input[type='file'] {
+  position: fixed;
+  right: 100%;
+  bottom: 100%;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}

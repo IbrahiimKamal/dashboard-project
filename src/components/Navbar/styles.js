@@ -13,7 +13,7 @@ export const navStyles = css`
 
 export const logoStyles = css`
   display: block;
-  width: 150px;
+  width: 120px;
 `;
 
 export const infoStyles = css`
@@ -23,10 +23,13 @@ export const infoStyles = css`
 
 export const messageIconStyles = css`
   margin-right: 1rem;
+  margin-bottom: 0.4rem;
+  color: #989db7;
 `;
 
 export const noteficationStyles = css`
   position: relative;
+  color: #989db7;
 `;
 
 export const noteficationIconStyles = css`
@@ -47,6 +50,10 @@ export const numberStyles = css`
 export const avatarContainerStyles = css`
   display: flex;
   align-items: center;
+  span {
+    color: #989db7;
+    cursor: pointer;
+  }
 `;
 
 export const avatarStyles = css`
